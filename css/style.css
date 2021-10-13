@@ -95,6 +95,7 @@ button {
      }
   }
 }
+
 /* Same as above, modified for operators */
 .ops:focus::after {
     content: attr(data-ops);
@@ -103,7 +104,6 @@ button {
 }
 
 /*Reset button */
-
 .reset {
     background: rgba(201,120,116,.28);
     color: #c97874;
@@ -145,6 +145,7 @@ button {
          opacity: 0;
      }
  }
+
 /* Division by zero animation */ 
 @keyframes broken {
     0% {
@@ -153,24 +154,34 @@ button {
     }
 
     5% {
-        tranform: rotate(5deg);
+        transform: rotate(5deg);
     }
 
     15% {
-        tranform: rotate(-5deg);
+        transform: rotate(-5deg);
     }
+
     20% {
         transform: rotate(5deg);
     }
+
     25% {
         transform: rotate(-5deg);
     }
+
     50% {
         transform: rotate(45deg);
     }
+
     70% {
+        transform: translate3d(0,2000px,0);
+        opacity: 1;
+    }
+
+    75% {
         opacity: 0;
     }
+
     100% {
         transform: translate3d(0,-2000px,0);
     }
@@ -189,7 +200,6 @@ button {
         opacity: 1;
     }
 }
-
 @media (min-width: 420px) {
 .calculator {
     width: 12em;
